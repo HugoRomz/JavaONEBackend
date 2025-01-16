@@ -1,0 +1,18 @@
+[
+  {
+    "nombre": "pikachu",
+    "fecha-de-lanzamiento": 112,
+    "duracion-en-minutos": 60,
+    "incluido-en-el-plan": false,
+    "suma-de-las-evaluaciones": 0.0,
+    "total-de-las-evaluaciones": 0
+  },
+  {
+    "nombre": "charizard",
+    "fecha-de-lanzamiento": 267,
+    "duracion-en-minutos": 905,
+    "incluido-en-el-plan": false,
+    "suma-de-las-evaluaciones": 0.0,
+    "total-de-las-evaluaciones": 0
+  }
+]

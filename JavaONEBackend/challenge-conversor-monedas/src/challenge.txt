@@ -1,0 +1,41 @@
+En este emocionante desafío de programación, te invitamos a construir tu propio Conversor de Monedas. Aprenderás a realizar solicitudes a una API de tasas de cambio, a manipular datos JSON y, finalmente, a filtrar y mostrar las monedas de interés. ¡Prepárate para una experiencia práctica y emocionante en el desarrollo Java!
+
+Los pasos para completar este desafío se detallarán a continuación y estarán disponibles en la sección adyacente:
+
+-- Configuración del Ambiente Java;
+-- Creación del Proyecto;
+-- Consumo de la API;
+-- Análisis de la Respuesta JSON;
+-- Filtro de Monedas;
+-- Exibición de Resultados a los usuarios;
+
+
+
+
+Propuesta de como debe quedar
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Sea bienvenido/a al Conversor de Moneda =)
+
+1) Dólar =>> Peso argentino
+2) Peso argentino =>> Dólar
+3) Dólar =>> Real brasileño
+4) Real brasileño =>> Dólar
+5) Dólar =>> Peso colombiano
+6) Peso colombiano =>> Dólar
+7) Salir
+
+Elija una opción válida:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+$valor
+~~~~~~~~~~~~~~~~~~~~~~~~
+Ingrese el valor que deseas convertir:
+$valor
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+resultado:
+El valor moneda.price[moneda.title] corresponde al valor final de =>>> 20293.75 []
+
+
+repetir

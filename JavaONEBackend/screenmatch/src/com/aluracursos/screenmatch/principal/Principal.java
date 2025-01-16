@@ -1,3 +1,5 @@
+package com.aluracursos.screenmatch.principal;
+
 import com.aluracursos.screenmatch.calculos.CalculadoraDeTiempo;
 import com.aluracursos.screenmatch.calculos.FiltroRecomendacion;
 import com.aluracursos.screenmatch.modelos.Episodio;
@@ -8,10 +10,7 @@ import java.util.ArrayList;
 
 public class Principal {
     public static void main(String[] args) {
-        Pelicula miPelicula = new Pelicula();
-
-        miPelicula.setNombre("Oppenheimer");
-        miPelicula.setFechaDeLanzamiento(2023);
+        Pelicula miPelicula = new Pelicula("Oppenheimer",2023);
         miPelicula.setDuracionEnMinutos(180);
         miPelicula.setIncluidoEnElPlan(true);
 
@@ -23,18 +22,14 @@ public class Principal {
         System.out.println(miPelicula.getTotalDeLasEvaluaciones());
         System.out.println("La media de nota de la pelicula es: "+ miPelicula.calculaMedia());
 
-        Serie casaDragon = new Serie();
-        casaDragon.setNombre("House of Dragon");
-        casaDragon.setFechaDeLanzamiento(2022);
+        Serie casaDragon = new Serie("House of Dragon",2022);
         casaDragon.setTemporadas(2);
         casaDragon.setMinutosPorEpisodio(50);
         casaDragon.setEpisodiosPorTemporada(10);
         casaDragon.muestraFichaTecnica();
 
-        Pelicula otraPelicula = new Pelicula();
-        otraPelicula.setNombre("Interestellar");
+        Pelicula otraPelicula = new Pelicula("Interestellar",2015);
         otraPelicula.setDuracionEnMinutos(120);
-        otraPelicula.setFechaDeLanzamiento(2015);
         otraPelicula.muestraFichaTecnica();
 
         CalculadoraDeTiempo calculadora = new CalculadoraDeTiempo();
@@ -54,11 +49,8 @@ public class Principal {
         episodio.setTotalVisualizaciones(300);
         filtroRecomendacion.filtra(episodio);
 
-        var peliculaDeRafa = new Pelicula();
-        peliculaDeRafa.setNombre("1917");
+        var peliculaDeRafa = new Pelicula("1917",2019);
         peliculaDeRafa.setDuracionEnMinutos(119);
-        peliculaDeRafa.setFechaDeLanzamiento(2019);
-
         ArrayList<Pelicula> listaDePeliculas = new ArrayList<>();
         listaDePeliculas.add(peliculaDeRafa);
         listaDePeliculas.add(miPelicula);

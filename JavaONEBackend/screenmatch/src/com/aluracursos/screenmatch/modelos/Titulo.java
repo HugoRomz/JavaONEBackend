@@ -1,12 +1,20 @@
 package com.aluracursos.screenmatch.modelos;
 
-public class Titulo {
+import com.google.gson.annotations.SerializedName;
+
+public class Titulo implements Comparable<Titulo> {
     private String nombre;
     private int fechaDeLanzamiento;
     private int duracionEnMinutos;
     private boolean incluidoEnElPlan;
     private double sumaDeLasEvaluaciones;
     private int totalDeLasEvaluaciones;
+
+    public Titulo(TituloPokeApi miTituloPoke) {
+        this.nombre = miTituloPoke.name();
+        this.fechaDeLanzamiento = Integer.valueOf(miTituloPoke.base_experience());
+        this.duracionEnMinutos = Integer.valueOf((int) miTituloPoke.weight());
+    }
 
     public int getTotalDeLasEvaluaciones() {
         return totalDeLasEvaluaciones;
@@ -44,6 +52,10 @@ public class Titulo {
         this.incluidoEnElPlan = incluidoEnElPlan;
     }
 
+    public Titulo(String nombre, int fechaDeLanzamiento) {
+        this.nombre = nombre;
+        this.fechaDeLanzamiento = fechaDeLanzamiento;
+    }
 
     public void muestraFichaTecnica (){
         System.out.println("El nombre de la pelicula es: "+ nombre);
@@ -57,4 +69,18 @@ public class Titulo {
     public double calculaMedia(){
         return sumaDeLasEvaluaciones / totalDeLasEvaluaciones;
     }
+
+    @Override
+    public int compareTo(Titulo otroTitulo) {
+        return this.getNombre().compareTo(otroTitulo.getNombre());
+    }
+    @Override
+    public String toString(){
+        return "(nombre= '" + nombre +
+                ", fechaDeLanzamiento= " + fechaDeLanzamiento +
+                ", duracionEnMinutos= " + duracionEnMinutos+")";
+    }
 }
+
+
+
